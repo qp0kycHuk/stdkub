@@ -50,8 +50,7 @@ module.exports = {
       default: withOpacity('--default-rgb'),
     },
     fontFamily: {
-      base: "'Intro', arial, helvetica, sans-serif",
-      alt: "'Izhitsa', arial, helvetica, sans-serif",
+      base: "'Inter', arial, helvetica, sans-serif",
     },
     zIndex: [0, 321, 322, 323, 324, 325, 326, 327, 328, 329, 'auto'],
     extend: {
