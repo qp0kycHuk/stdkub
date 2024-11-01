@@ -1,9 +1,9 @@
 const elementsSizes = {
-  xs: '24px',
-  sm: '32px',
-  base: '60px',
-  lg: '70px',
-  xl: '80px',
+  xs: '32px',
+  sm: '42px',
+  base: '50px',
+  lg: '60px',
+  xl: '70px',
 }
 
 const headingStyles = {

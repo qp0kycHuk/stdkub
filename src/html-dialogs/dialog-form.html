@@ -1,0 +1,32 @@
+<div class="dialog dialog-form">
+  <form class="dialog-form-content">
+    <div class="text-2xl sm:text-3.5xl font-extrabold">Нужна консультация?</div>
+    <div class="">Отправьте заявку и мы перезвоним вам</div>
+    <div class="mt-8 flex flex-col gap-4">
+      <label class="block w-full ">
+        <div class="font-medium mb-2">Ваше имя</div>
+        <div class="relative">
+          <input type="text" class="input w-full" required>
+        </div>
+      </label>
+      <label class="block w-full ">
+        <div class="font-medium mb-2">Ваш телефон</div>
+        <div class="relative">
+          <input type="tel" class="input w-full" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" required>
+        </div>
+      </label>
+    </div>
+    <div class="mt-8 flex">
+      <button class="btn btn-primary btn-fill" type="submit">
+        <span class="font-semibold">Отправить заявку</span>
+      </button>
+    </div>
+    <a href="javascript:;" class="mt-6 text-xs opacity-50 block hover:underline">
+      Отправляя форму, Вы даете согласие на обработку <br>
+      Ваших персональных данных
+    </a>
+  </form>
+  <div class="dialog-form-image ratio ratio-1/1">
+    <img src="/img/dialog-form.jpg" alt="" class="absolute-fit object-cover">
+  </div>
+</div>

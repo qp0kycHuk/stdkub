@@ -8,10 +8,12 @@ import toggle from 'npm-kit-toggle'
 import ripple from '@qpokychuk/ripple'
 import swiper from './swiper'
 import animations from './animations'
-
+import { Qwiz } from './qwiz'
 import '../scss/index.scss'
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
+// @ts-ignore
+window.Qwiz = Qwiz
 
 function loadHandler() {
   scrollTo.init()

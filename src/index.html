@@ -1,5 +1,363 @@
 <%= require('./html-includes/header.html')() %>
 
-Hello world!
+<section class="border-b lg:hidden border-default/15 py-2 bg-l3">
+  <a href="javascript:;" target="_blank" class="mx-auto hover-underline text-[3.1vw] xs:text-sm">
+    г. Краснодар, ул. Рождественская набережная 45/1, оф.21
+  </a>
+</section>
+
+<header class="header sticky top-0 z-3">
+  <img src="/img/logo.svg" alt="" class="w-28 h-9 sm:w-40 sm:h-12">
+
+  <a href="javascript:;" target="_blank" class="mx-auto hover-underline max-lg:hidden">
+    г. Краснодар, ул. Рождественская набережная 45/1, оф.21
+  </a>
+
+  <div class="flex gap-12">
+    <a href="javascript:;" class="btn btn-text gap-3 header-link hover-underline-wrapper max-md:hidden">
+      <div class="header-link-image">
+        <c-icon class="icon text-2xl" href="/img/icons.svg#email"></c-icon>
+      </div>
+      <div class="text-lg font-medium hover-underline">zakaz@stdkub.ru</div>
+    </a>
+    <a href="javascript:;" class="btn btn-text gap-3 header-link hover-underline-wrapper">
+      <div class="header-link-image max-sm:hidden">
+        <c-icon class="icon text-2xl" href="/img/icons.svg#smartphone"></c-icon>
+      </div>
+      <div class="text-xs xs:text-lg font-medium hover-underline">+7 918 130 88 44</div>
+    </a>
+  </div>
+
+  <div class="flex gap-2 ml-3">
+    <a href="javascript:;" class="btn btn-text">
+      <img src="/img/telegram.svg" alt="" class="icon text-2.5xl sm:text-3.5xl">
+    </a>
+    <a href="javascript:;" class="btn btn-text">
+      <img src="/img/whatsapp.svg" alt="" class="icon text-2.5xl sm:text-3.5xl">
+    </a>
+  </div>
+</header>
+
+
+<section class="started">
+  <div class="started-image absolute-fit " data-animation="fadeIn" data-delay="0.075">
+    <picture>
+      <source media="(min-width: 769.98px)" srcset="/img/started-lg.jpg">
+      <source media="(min-width: 609.98px)" srcset="/img/started-md.jpg">
+      <img src="/img/started-sm.jpg" alt="" class="absolute inset-0 md:max-xl:left-1/4 size-full object-bottom md:object-left xl:object-right object-cover xl:object-contain">
+    </picture>
+  </div>
+  <div class="started-content">
+    <div class="started-title" data-animation="fadeInLeft">
+      Мастерская наградной <br>
+      атрибутики и сувениров
+    </div>
+    <div class="mt-3 sm:mt-6 max-sm:text-sm" data-animation="fadeInLeft" data-delay="0.025">
+      Индивидуальные заказы и готовые решения
+    </div>
+    <div class="mt-6 sm:mt-12" data-animation="fadeInLeft" data-delay="0.05">
+      <button class="btn btn-primary btn-fill px-10">
+        <span class="font-semibold">Получить консультацию</span>
+      </button>
+    </div>
+
+    <div class="started-plate" data-animation="fadeInLeft" data-delay="0.075">
+      <img src="img/started-plate.svg" alt="">
+      <div class="text-sm font-medium">
+        Подберем продукцию индивидуально <br class="max-sm:hidden"> под ваши задачи и бюджет
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Изготовим для вас -->
+<section class="products">
+  <div class="title mb-6 sm:mb-14 text-center" data-animation="fadeInUp">
+    Изготовим для вас
+  </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6">
+    <% for(let i = 0; i < 8; i++) { %>
+    <div class="products-item ratio ratio-1/1" data-animation="fadeInUp">
+      <img src="/img/products/1.jpg" class="products-item-image absolute-fit object-cover" alt="">
+      <div class="products-item-content absolute-fit">
+        <div class="font-bold max-sm:text-sm">Медали</div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Для кого подходит -->
+<section class="who">
+  <div class="title mb-6 sm:mb-14 text-center" data-animation="fadeInUp">
+    Для кого подходит
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+    <div class="who-item who-item-1" data-animation="fadeInUp">
+      <div class="who-item-image absolute-fit">
+        <picture>
+          <source media="(min-width: 609.98px)" srcset="/img/who/1.png">
+          <img src="/img/who/1-sm.png" alt="" class="absolute right-0 top-0 h-full">
+        </picture>
+      </div>
+      <div class="who-item-content">
+        <div class="text-1.5xl font-bold">
+          Развлекательные <br>
+          мероприятия
+        </div>
+        <div class="flex gap-2 flex-wrap mt-auto text-black">
+          <div class="px-4 py-2 rounded-full bg-white text-sm">
+            Конкурсы
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="who-item who-item-2" data-animation="fadeInUp" data-delay="0.025">
+      <div class="who-item-image absolute-fit">
+        <picture>
+          <source media="(min-width: 609.98px)" srcset="/img/who/2.png">
+          <img src="/img/who/2-sm.png" alt="" class="absolute-fit object-cover">
+        </picture>
+      </div>
+      <div class="who-item-content">
+        <div class="text-1.5xl font-bold">
+          Развлекательные <br>
+          мероприятия
+        </div>
+        <div class="flex gap-2 flex-wrap mt-auto text-black">
+          <div class="px-4 py-2 rounded-full bg-white text-sm">
+            Конкурсы
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="who-item who-item-3" data-animation="fadeInUp" data-delay="0.05">
+      <div class="who-item-image absolute-fit">
+        <picture>
+          <source media="(min-width: 609.98px)" srcset="/img/who/3.png">
+          <img src="/img/who/3-sm.png" alt="" class="absolute-fit object-cover">
+        </picture>
+      </div>
+      <div class="who-item-content">
+        <div class="text-1.5xl font-bold">
+          Развлекательные <br>
+          мероприятия
+        </div>
+        <div class="flex gap-2 flex-wrap mt-auto text-black">
+          <div class="px-4 py-2 rounded-full bg-white text-sm">
+            Конкурсы
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Поможем вам определиться -->
+<section class="qwiz-wrapper relative">
+  <img src="/img/qwiz-bg.jpg" alt="" class="absolute-fit object-cover">
+  <div class="relative text-white">
+    <div data-animation="fadeInUp">
+      <div class="title text-center mb-3 sm:mb-4 max-sm:hidden">Поможем вам определиться</div>
+      <div class="title text-center mb-3 sm:mb-4 sm:hidden">Для кого подходит</div>
+      <div class="text-center font-semibold text-sm sm:text-1.5xl mb-6 sm:mb-14">
+        Ответьте на 5 простых вопросов и мы подберем для вас идеальный вариант
+      </div>
+    </div>
+
+    <form class="qwiz group" data-animation="fadeInUp">
+      <div class="qwiz-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="qwiz-slide swiper-slide">
+            <div class="pb-12">
+              <div class="relative mb-4 sm:mb-10">
+                <div class="font-bold text-2xl sm:text-3.5xl text-center">Какой тип продукции вам нужен?</div>
+                <div class="opacity-60 absolute right-0 top-1/2 -translate-y-1/2 max-sm:hidden">1 из 5</div>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                <% for(let i = 0; i < 7; i++) { %>
+                <label class="qwiz-checkbox">
+                  <input type="checkbox" class="hidden" data-condition-target="type">
+                  <img src="/img/qwiz/type/1.svg" alt="" class="icon text-3.5xl">
+                  <div class="font-medium max-sm:text-sm mt-2 sm:mt-4">
+                    Кубки <br>
+                    Кубки
+                  </div>
+                  <c-icon class="icon absolute top-3 left-3 text-2xl opacity-40 qwiz-checkbox-icon" href="img/icons.svg#circle-check"></c-icon>
+                </label>
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <div class="qwiz-slide swiper-slide">
+            <div class="pb-12">
+              <div class="relative mb-4 sm:mb-10">
+                <div class="font-bold text-2xl sm:text-3.5xl text-center">Какое количество продукции вам нужно?</div>
+                <div class="opacity-60 absolute right-0 top-1/2 -translate-y-1/2 max-sm:hidden">1 из 5</div>
+              </div>
+              <div class="flex gap-3 justify-center flex-wrap">
+                <% for(let i = 0; i < 4; i++) { %>
+                <label class="qwiz-count">
+                  <div class="qwiz-count-header p-4 flex items-center gap-2">
+                    <img src="/img/qwiz/type/1.svg" alt="" class="icon text-2xl">
+                    <div class="font-medium">
+                      Кубки
+                    </div>
+                  </div>
+                  <div class="qwiz-count-content w-full p-4">
+                    <div class="font-medium">Кол-во, шт</div>
+                    <input type="number" class="input w-full" required>
+                  </div>
+
+                </label>
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <div class="qwiz-slide swiper-slide">
+            <div class="pb-12">
+              <div class="relative mb-4 sm:mb-10">
+                <div class="font-bold text-2xl sm:text-3.5xl text-center">К какой дате вы бы хотели получить свой заказ?</div>
+                <div class="opacity-60 absolute right-0 top-1/2 -translate-y-1/2 max-sm:hidden">1 из 5</div>
+              </div>
+
+              <label class="block w-[450px] max-w-full mx-auto">
+                <div class="font-medium mb-2">Выберите дату</div>
+                <div class="relative">
+                  <input type="text" mindate="10.23.2024" value="10.25.2024" is="air-datepicker" class="input w-full" placeholder="дд.мм.гг">
+                  <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2 text-xl opacity-50" href="img/icons.svg#calendar"></c-icon>
+                </div>
+              </label>
+
+            </div>
+          </div>
+          <div class="qwiz-slide swiper-slide">
+            <div class="pb-12">
+              <div class="relative mb-4 sm:mb-10">
+                <div class="font-bold text-2xl sm:text-3.5xl text-center">Из какого вы города?</div>
+                <div class="opacity-60 absolute right-0 top-1/2 -translate-y-1/2 max-sm:hidden">1 из 5</div>
+              </div>
+
+              <label class="block w-[450px] max-w-full mx-auto">
+                <div class="font-medium mb-2">Напишите город</div>
+                <div class="relative">
+                  <input type="text" class="input w-full" placeholder="Например, Москва" required>
+
+                </div>
+              </label>
+
+            </div>
+          </div>
+          <div class="qwiz-slide swiper-slide">
+            <div class="pb-12">
+              <div class="relative mb-4 sm:mb-10">
+                <div class="font-bold text-2xl sm:text-3.5xl text-center">Оставьте номер телефона и выберите удобный способ связи</div>
+                <div class="opacity-60 absolute right-0 top-1/2 -translate-y-1/2 max-sm:hidden">1 из 5</div>
+              </div>
+
+              <label class="block w-[450px] max-w-full mx-auto">
+                <div class="font-medium mb-2">Ваш телефон</div>
+                <div class="relative">
+                  <input type="tel" class="input w-full" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" required>
+                </div>
+              </label>
+
+              <div class="mt-7 w-[450px] max-w-full mx-auto">
+                <div class="font-medium mb-2">Как вам ответить?</div>
+                <div class="flex gap-3 max-sm:flex-col">
+                  <label class="grow  form-soc">
+                    <input type="radio" name="soc" class="hidden">
+                    <img src="/img/qwiz-telegram.svg" alt="" class="rounded-full">
+                    <div class="text-sm ">В Telegram</div>
+                  </label>
+                  <label class="grow form-soc">
+                    <input type="radio" name="soc" class="hidden">
+                    <img src="/img/qwiz-whatsapp.svg" alt="" class="rounded-full">
+                    <div class="text-sm">В WhatsApp</div>
+                  </label>
+                  <label class="grow form-soc">
+                    <input type="radio" name="soc" class="hidden">
+                    <img src="/img/phone.svg" alt="" class="rounded-full">
+                    <div class="text-sm">Позвонить</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-default/10"></div>
+      <div class="qwiz-nav flex gap-2 sm:gap-6 justify-center mt-6 max-sm:w-full px-4">
+        <button class="btn btn-primary gap-2 text-default bg-l2 qwiz-prev sm:w-52 max-sm:w-1/2">
+          <c-icon class="icon text-2xl" href="img/icons.svg#arrow-left"></c-icon>
+          <span class="font-semibold max-xs:hidden">Предыдущий</span>
+        </button>
+        <button class="btn btn-primary btn-fill gap-2 qwiz-next sm:w-52 max-sm:w-1/2 group-[.last]:hidden">
+          <span class="font-semibold max-xs:hidden">Следующий</span>
+          <c-icon class="icon text-2xl" href="img/icons.svg#arrow-right"></c-icon>
+        </button>
+        <button class="btn btn-primary btn-fill gap-2 sm:w-52 max-sm:w-1/2 hidden group-[.last]:flex">
+          <span class="font-semibold">Готово</span>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</section>
+<script>
+  const slider = new Swiper('.qwiz-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    // touchRatio: 0,
+    autoHeight: true,
+    navigation: {
+      prevEl: '.qwiz-prev',
+      nextEl: '.qwiz-next',
+    }
+  })
+
+  const qwizEl = document.querySelector('.qwiz')
+
+  if (qwizEl) {
+    new Qwiz(qwizEl, slider).init()
+  }
+</script>
+
+<section class="features">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="features-item" data-animation="fadeInUp">
+      <div class="features-item-image">
+        <img src="/img/features/1.svg" alt="" class="icon">
+      </div>
+      <div class="features-item-content">
+        <div class="font-bold text-xl sm:text-1.5xl">
+          Широкий
+          ассортимент
+        </div>
+        <div class="mt-2 sm:mt-4 opacity-60 max-sm:text-sm">
+          Предоставляем вам выбор
+          атрибутики из большого
+          количества вариантов-
+          от кубков до значков
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="/img/logo-white.svg" alt="">
+  <div class="font-medium">Мастерская наградной атрибутики и сувениров</div>
+  <div class="font-medium opacity-60">ИП Бизикина Т.В.</div>
+  <div class="flex items-center gap-5">
+    <div class="">Разработка:</div>
+    <img src="/img/stdkit.svg" alt="">
+  </div>
+</footer>
+
 
 <%= require('./html-includes/footer.html')() %>
